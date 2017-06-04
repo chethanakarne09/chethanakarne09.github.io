@@ -2,30 +2,73 @@
 <html
 
 <head>
-<meta charset="UTF-8">
 <title><b><i><u>Chethana's webpage</u></i></b></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
 
+body {background-color: powderblue;}
+h1 {color: blue;}
 
-
+</style>
 </head>
 
-<body>
-
-welcome to chethana's webpage
-
-<img src="myimage.jpg" width="100" height="100">
+<body onload="startTime()">
 
 
+<div align="center" class="container-fluid">
+
+<h1><br>RESUME: JOB APPLICATION</br></h1>
+<img src="myimage.jpg" width="400" height="400" class="img-circle">
+
+</div>
+
+<div id="mydiv" align="center" onclick="document.getElementById('mydiv').innerHTML = Date()"><br>Show Date()</br></div>
+
+
+<script>
+function startTime(){
+	document.getElementById('clock').innerHTML = new Date();
+	setTimeOut(startTime,500);
+}
+
+</script>
+
+<div align="center" id="clock" onclick="">Show Clock()</div>
+
+<div align="center" id="email" onclick="showhide()">show my email</div>
+<script>
+
+var shown=false;
+function showhide(){
+
+	if(shown)
+	{
+		document.getElementById('email').innerHTML = "show my email";
+		shown=false;
+	}
+	else
+	{
+		var myemail="<a href='mailto: Chethana" + "@" + "udayton.edu'>chethana" + "@" + "udayton.edu</a>";
+		document.getElementById('email').innerHTML = "myemail";
+		shown=true;
+	}
+
+}
 
 
 
 
 
 
-
-
+</script>
 
 </body>
 
 
 </html>
+
+
